@@ -74,13 +74,7 @@ namespace Calculator
                     numInput2 = Console.ReadLine();
                 }
 
-                // Ask the user to choose an operator.
-                Console.WriteLine("Choose an operator from the following list:");
-                Console.WriteLine("\ta - Add");
-                Console.WriteLine("\ts - Subtract");
-                Console.WriteLine("\tm - Multiply");
-                Console.WriteLine("\td - Divide");
-                Console.Write("Your option? ");
+                Ask();
 
                 string op = Console.ReadLine();
 
@@ -107,6 +101,16 @@ namespace Calculator
                 Console.WriteLine("\n"); // Friendly linespacing.
             }
             return;
+        }
+        static void Ask()
+        {
+            // Ask the user to choose an operator.
+            Console.WriteLine("Choose an operator from the following list:");
+            Console.WriteLine("\ta - Add");
+            Console.WriteLine("\ts - Subtract");
+            Console.WriteLine("\tm - Multiply");
+            Console.WriteLine("\td - Divide");
+            Console.Write("Your option? ");
         }
     }
 }

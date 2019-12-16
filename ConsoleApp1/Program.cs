@@ -11,26 +11,30 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             {
-                //implement option to close the app or continue
-                //implement option to calculate more than 2 number like for example 5+5+5+5
-                try
-            {
+                bool IsTrue = true;
                 Console.WriteLine("Welcome to better calculator 1.2");
-                Console.WriteLine("Your current time is " + DateTime.Now);
-               
-                Calculation();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executed");
-            }
+                while (IsTrue == true)
+                {
+                    //implement option to calculate more than 2 number like for example 5+5+5+5
+                    try
+                    {
+                        Console.WriteLine("Your current time is " + DateTime.Now);
 
+                        Calculation();
+                        Console.Write("Press 'y' to continue, press anything else to close this app:");
+                        string proceed = Console.ReadLine();
+                        if (proceed != "y")
+                        {
+                            Console.WriteLine("Thanks for using this calculator");
+                            Environment.Exit(0);
+                        }
 
-            Console.ReadLine();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }
             }
             static void Calculation()
             {

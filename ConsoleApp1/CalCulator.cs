@@ -6,6 +6,7 @@ namespace ConsoleApp1
 {
     public class CalCulator
     {
+        static public string Test = "testing static";
         // Add two integers and returns the sum  
         public double Add(double num1, double num2)
         {

@@ -13,6 +13,12 @@ namespace ConsoleApp1
             {
                 bool IsTrue = true;
                 Console.WriteLine("Welcome to better calculator 1.2");
+                Console.WriteLine(CalCulator.Test);
+                AdvancedCalc calculateme = new AdvancedCalc(81);
+                calculateme.number1 = 9;
+                Console.WriteLine(calculateme.number1);
+                Console.WriteLine(calculateme.Square(81));
+                Console.WriteLine(calculateme.Add(81, 81));
                 while (IsTrue == true)
                 {
                     //implement option to calculate more than 2 number like for example 5+5+5+5
@@ -62,7 +68,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine(calculate.Multiply(number1, number2));
                 }
-                else if (Operator == "*")
+                else if (Operator == "/")
                 {
                     Console.WriteLine(calculate.Division(number1, number2));
                 }
